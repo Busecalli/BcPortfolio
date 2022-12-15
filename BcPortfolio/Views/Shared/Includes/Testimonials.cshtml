@@ -1,0 +1,40 @@
+﻿@model HomeModel
+
+<!-- TESTIMONIALS -->
+<div class="beny_tm_testimonials" id="comment">
+	<div class="container">
+		<div class="beny_tm_title_holder">
+			<span>Yorumlar</span>
+			<h3>Yorumlar</h3>
+			<p>Tarafımdan herhangi bir hizmet alan kişilerin geri dönüşleri..</p>
+		</div>
+		<div class="testimonials_list">
+			<div class="owl-carousel">
+
+				@foreach(var yorum in Model.Yorumlar)
+				{
+					<div class="item">
+						<div class="list_inner">
+							<div class="left">
+								<img src="img/thumbs/1-1.jpg" alt="" />
+								<div class="main" data-img-url="img/testimonials/1.jpg"></div>
+							</div>
+							<div class="right">
+								<img class="svg" src="img/svg/quote.svg" alt="" />
+								<p class="text">@yorum.YorumcuAciklama</p>
+								<div class="details">
+									<h3 class="name"><span>@yorum.YorumcuAdSoyad</span></h3>
+									<span class="job">@yorum.YorumcuMeslek</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			
+			</div>
+			<span class="left_nav"><span class="icon"></span></span>
+			<span class="right_nav"><span class="icon"></span></span>
+		</div>
+	</div>
+</div>
+<!-- /TESTIMONIALS -->

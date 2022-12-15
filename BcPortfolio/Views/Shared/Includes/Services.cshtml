@@ -1,0 +1,32 @@
+﻿@model HomeModel
+
+<!-- SERVICES -->
+<div class="beny_tm_services" id="service">
+	<div class="container">
+		<div class="beny_tm_title_holder">
+			<span>Hizmetler</span>
+			<h3>Hizmetler</h3>
+			<p>Üzerinde çalışmakta olduğum ve sizlere sunabileceğim hizmetler...</p>
+		</div>
+		<div class="service_list">
+			<ul>
+				@foreach (var servis in Model.Servisler)
+				{
+					<li class="wow fadeInLeft">
+						<div class="list_inner">
+							<img class="svg" src="img/svg/1.svg" alt="" />
+							<div class="service_title"><h3>@servis.ServisAdi</h3></div>
+							<div class="popup_informations">
+								<div class="image">
+									<img src="img/thumbs/4-3.jpg" alt="" />
+									<div class="main" data-img-url="img/service/1.jpg"></div>
+								</div>
+							</div>
+						</div>
+					</li>
+				}
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- /SERVICES -->

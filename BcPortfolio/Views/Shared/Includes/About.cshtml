@@ -1,0 +1,85 @@
+﻿@model HomeModel
+
+<!-- ABOUT -->
+<div class="beny_tm_about" id="about">
+	<div class="container">
+		<div class="beny_tm_title_holder">
+			<span>Hakkımda</span>
+			<h3>Ben Kimim?</h3>
+			<p>@HomeModel.Hakkimda.BaslikAciklamasi</p>
+		</div>
+		<div class="about_inner">
+			<div class="left wow fadeInLeft" data-wow-duration="1.2s">
+				<img src="img/thumbs/1-1.jpg" alt="" />
+				<div class="image" data-img-url="img/about/1.jpg"></div>
+			</div>
+			<div class="right wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.3s">
+				<div class="short">
+					<h3>@HomeModel.Hakkimda.AltBaslik</h3>
+					<p>@HomeModel.Hakkimda.AltBaslikAciklamasi</p>
+				</div>
+				<div class="extra">
+					<h3 class="title">Kişisel Bilgilerim</h3>
+					<div class="list">
+						<ul>
+							<li><p><span>Ad Soyad:</span> @HomeModel.Hakkimda.AdSoyad</p></li>
+							<li><p><span>Yaş:</span> @HomeModel.Hakkimda.Yas</p></li>
+							<li><p><span>Meslek:</span> @HomeModel.Hakkimda.Meslek</p></li>
+							<li><p><span>Telefon:</span> @HomeModel.Hakkimda.Telefon</p></li>
+							<li><p><span>Mail:</span> @HomeModel.Hakkimda.Mail</p></li>
+							<li><p><span>Yabancı Dil:</span> @HomeModel.Hakkimda.Diller</p></li>
+						</ul>
+					</div>
+					<div class="beny_tm_button color">
+						<a href="img/about/1.jpg" download>
+							<span class="wrapper">
+								<span class="first">Download CV</span>
+								<span class="second">Download CV</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="beny_tm_resume" id="skill">
+			<div class="main_title">
+				<h3>Yetenekler & Deneyimler</h3>
+			</div>
+			<div class="resume_inner">
+				<div class="skills wow fadeInLeft" data-wow-duration="1.2s">
+					<div class="resume_title">
+						<img class="svg" src="img/svg/briefcase.svg" alt="" />
+						<span>Yetenekler</span>
+					</div>
+					<div class="tokyo_progress">
+						@foreach(var yetenek in Model.Yetenekler)
+						{
+							<div class="progress_inner" data-value="@yetenek.YetenekDuzey">
+							<span><span class="label">@yetenek.YetenekAdi</span><span class="number">@yetenek.YetenekDuzey%</span></span>
+							<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+						</div>
+						}
+					</div>
+				</div>
+				<div class="education wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.3s">
+					<div class="resume_title">
+						<img class="svg" src="img/svg/award.svg" alt="" />
+						<span>Eğitim & Deneyimler</span>
+					</div>
+					<div class="edu_list">
+						<ul>
+							@foreach(var deneyim in Model.Tecrubeler)
+							{
+								<li>
+									<p><span>@deneyim.TecrubeBaslik</span> - @deneyim.TecrubeAciklama</p>
+									<span class="year">@deneyim.TecrubeYil</span>
+								</li>
+							}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /ABOUT -->

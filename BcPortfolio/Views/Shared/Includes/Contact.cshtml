@@ -1,0 +1,66 @@
+﻿@model HomeModel;
+
+<!-- CONTACT -->
+<div class="beny_tm_contact" id="contact">
+	<div class="container">
+		<div class="contact_inner">
+			<div class="left wow fadeInLeft" data-wow-duration="1.2s">
+				<div class="beny_tm_title_holder">
+					<span>İletişim</span>
+					<h3>Bana Ulaşın!</h3>
+					<a> Bana ulaşmak isterseniz, herhangi bir soru, sorun, şikayetinizi belirtmek ve sizlere sunabileceğim hizmetler hakkında bilgi almak isterseniz aşağıdaki bilgilerden bana ulaşabilirsiniz!</a>
+				</div>
+				<div class="short_list">
+					
+					<ul>
+						<li>
+							<img class="svg" src="img/svg/phone.svg" alt="" />
+							<span>@HomeModel.Hakkimda.Telefon</span>
+						</li>
+						<li>
+							<img class="svg" src="img/svg/mail.svg" alt="" />
+							<span><a href=mailto:@HomeModel.Hakkimda.Mail ">@HomeModel.Hakkimda.Mail</a></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="right wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.3s">
+				<div class="title">
+					<p>Size geri dönüş yapmamı istediğiniz bir konu var ise bana mesaj bırakabilirsiniz!</p>
+				</div>
+				<div class="fields">
+					<form action="/" method="post" class="contact_form" id="contact_form" autocomplete="off">
+						<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+						<div class="empty_notice"><span>Please Fill Required Fields</span></div>
+						<div class="first_row">
+							<input id="name" type="text" placeholder="Ad-Soyad" />
+						</div>
+						<div class="second">
+							<div class="left">
+								<input id="email" type="text" placeholder="Mail" />
+							</div>
+							<div class="right">
+								<input id="subject" type="text" placeholder="Konu" />
+							</div>
+						</div>
+						<div class="third">
+							<textarea id="message" placeholder="Mesajınız..."></textarea>
+						</div>
+						<div class="beny_tm_button">
+							<a id="send_message" href="#">
+								<span class="wrapper">
+									<span class="first">Gönder</span>
+									<span class="second">Gönder</span>
+								</span>
+							</a>
+						</div>
+
+						<!-- If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  -->
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /CONTACT -->
